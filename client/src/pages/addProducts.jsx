@@ -17,6 +17,10 @@ const AddProduct = () => {
     navigate('/inventory');
   }
 
+  const handleBackButton = () => {
+    navigate("/inventory"); // Navigate to /inventory when button is clicked
+  }
+
     return(
 <>
       <div className="w-screen h-screen bg-zinc-900">
@@ -53,6 +57,13 @@ const AddProduct = () => {
         <div className="flex justify-center px-5">
           <button type="button" onClick={handleAdd} className=" font-medium p-3 px-12 m-3 mb-1 rounded-xl bg-gray-400 text-black border border-solid border-neutral-950 hover:text-white hover:bg-black hover:border-solid hover:border-white hover:cursor-pointer">Add</button>
         </div>
+        <div className="flex justify-end mb-0">
+              <button type="button" className="p-2 px-3 m-0 rounded-xl bg-gray-400 text-black border border-solid border-neutral-950 hover:text-white hover:bg-black hover:border-solid hover:border-white hover:cursor-pointer" onClick={handleBackButton}>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+                </svg>  
+              </button>
+            </div>
       </div>
       </div>
       </div>

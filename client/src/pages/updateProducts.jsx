@@ -49,8 +49,12 @@ const UpdateProduct = () => {
     }
   };
 
+  const handleBackButton = () => {
+    navigate("/inventory"); // Navigate to /inventory when button is clicked
+  }
+
   return (
-    <div className="w-screen h-screen bg-zinc-900">
+    <div className="w-screen h-fit bg-zinc-900">
         <div className="pt-10 pb-2 text-4xl font-bold tracking-wider font-serif text-center text-white">Edit Product Details</div>
 
         <div className="flex justify-center item-center font-mono">
@@ -86,8 +90,16 @@ const UpdateProduct = () => {
             <div className="flex justify-center px-5 mb-0">
               <button type="submit" className="font-medium p-3 px-10 m-3 rounded-xl bg-gray-400 text-black border border-solid border-neutral-950 hover:text-white hover:bg-black hover:border-solid hover:border-white hover:cursor-pointer" disabled={loading}>{loading ? 'Updating...' : 'Update'}</button>
             </div>
+            
           </form>
         </div>
+            <div className="flex justify-end mb-0">
+              <button type="button" className="p-2 px-3 m-0 rounded-xl bg-gray-400 text-black border border-solid border-neutral-950 hover:text-white hover:bg-black hover:border-solid hover:border-white hover:cursor-pointer" onClick={handleBackButton}>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+                </svg>  
+              </button>
+            </div>
       </div>
       </div>
     </div>
