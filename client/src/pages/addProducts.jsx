@@ -54,13 +54,32 @@ const AddProduct = () => {
           </div>
         </div>
 
-        <div className="flex justify-center px-5">
-          <button type="button" onClick={handleAdd} className=" font-medium p-3 px-12 m-3 mb-1 rounded-xl bg-gray-400 text-black border border-solid border-neutral-950 hover:text-white hover:bg-black hover:border-solid hover:border-white hover:cursor-pointer">Add</button>
-        </div>
+        <div className="flex px-5 justify-center">
+                            <button
+                                type="button"
+                                className="relative px-5 py-2 font-mono bg-gray-400 text-black rounded-lg border border-solid border-neutral-950 hover:px-5 hover:text-white hover:bg-black hover:border-white hover:text-transparent group"
+                                onClick={handleAdd}
+                            >
+                                Add
+                                <svg
+                                    className=" size-6 p-1 absolute inset-0 m-auto w-10 h-10 text-white transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="1.5"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                >
+                                    <path d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+
         <div className="flex justify-end mb-0">
               <button type="button" className="p-2 px-3 m-0 rounded-xl bg-gray-400 text-black border border-solid border-neutral-950 hover:text-white hover:bg-black hover:border-solid hover:border-white hover:cursor-pointer" onClick={handleBackButton}>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-4">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
                 </svg>  
               </button>
             </div>

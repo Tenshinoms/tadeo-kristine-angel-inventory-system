@@ -88,15 +88,31 @@ const UpdateProduct = () => {
               <input type="text" id="price" value={price} onChange={(e) => setPrice(e.target.value)} className="ml-3 p-1 text-black rounded border border-gray-500" />
             </div>
             <div className="flex justify-center px-5 mb-0">
-              <button type="submit" className="font-medium p-3 px-10 m-3 rounded-xl bg-gray-400 text-black border border-solid border-neutral-950 hover:text-white hover:bg-black hover:border-solid hover:border-white hover:cursor-pointer" disabled={loading}>{loading ? 'Updating...' : 'Update'}</button>
+              <button
+                type="submit"
+                className="relative px-4 py-2 font-mono bg-gray-400 text-black rounded-lg border border-solid border-neutral-950 hover:px-4 hover:text-white hover:bg-black hover:border-white hover:text-transparent group" disabled={loading}>
+                  {loading ? 'Updating...' : 'Update'}
+
+                  <svg
+                      className=" size-6 p-1 absolute inset-0 m-auto w-10 h-10 text-white transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                  >
+                      <path d="M7.5 7.5h-.75A2.25 2.25 0 0 0 4.5 9.75v7.5a2.25 2.25 0 0 0 2.25 2.25h7.5a2.25 2.25 0 0 0 2.25-2.25v-7.5a2.25 2.25 0 0 0-2.25-2.25h-.75m0-3-3-3m0 0-3 3m3-3v11.25m6-2.25h.75a2.25 2.25 0 0 1 2.25 2.25v7.5a2.25 2.25 0 0 1-2.25 2.25h-7.5a2.25 2.25 0 0 1-2.25-2.25v-.75" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+              </button>
             </div>
-            
           </form>
         </div>
             <div className="flex justify-end mb-0">
               <button type="button" className="p-2 px-3 m-0 rounded-xl bg-gray-400 text-black border border-solid border-neutral-950 hover:text-white hover:bg-black hover:border-solid hover:border-white hover:cursor-pointer" onClick={handleBackButton}>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-4">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
                 </svg>  
               </button>
             </div>
